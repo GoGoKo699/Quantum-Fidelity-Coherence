@@ -16,7 +16,7 @@ Accordingly, this repository does not claim a new collective overlap measurement
 
 **Qisheng Wang and Zhicheng Zhang**, *Sample-Optimal Quantum Estimators for Pure-State Trace Distance and Fidelity via Samplizer*, ICALP 2026, LIPIcs 374, Article 154, [publisher full text](https://drops.dagstuhl.de/storage/00lipics/lipics-vol374-icalp2026/html/LIPIcs.ICALP.2026.154/LIPIcs.ICALP.2026.154.html), [arXiv:2410.21201](https://arxiv.org/abs/2410.21201).
 
-This work supplies the unrestricted $\Theta(\epsilon^{-2})$ sample endpoint for pure-state root fidelity, as well as the broader samplizer framework. The present result preserves that endpoint and identifies the coherent-run size needed to attain it. It makes no claim to improve the unrestricted copy complexity. The elementary two-dimensional testing lower bound is included directly in the [converse](../science/adaptive_converse.md).
+This work supplies the unrestricted $`\Theta(\epsilon^{-2})`$ sample endpoint for pure-state root fidelity, as well as the broader samplizer framework. The present result preserves that endpoint and identifies the coherent-run size needed to attain it. It makes no claim to improve the unrestricted copy complexity. The elementary two-dimensional testing lower bound is included directly in the [converse](../science/adaptive_converse.md).
 
 ## 3. Adaptive replica restrictions and likelihood domination
 
