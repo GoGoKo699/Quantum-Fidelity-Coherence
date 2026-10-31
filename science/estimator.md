@@ -88,7 +88,7 @@ The multiplicity statement is proved in [Exact block information](block_informat
 To determine the value of $`A_m`$, introduce the central sum of all transpositions on $`2m`$ registers,
 
 ```math
-C_{2m}=\sum_{1\le a<b\le2m}S_{a,b}.
+C_{2m}=\sum_{1\le a\lt b\le2m}S_{a,b}.
 ```
 
 On a Schur sector of shape $`\lambda`$, its eigenvalue is the sum of box contents,

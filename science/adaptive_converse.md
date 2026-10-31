@@ -151,7 +151,7 @@ N<2^{-16}\min\left\{\sqrt d,\frac{1}{b\epsilon^4}\right\}.
 \qquad\text{(11)}
 ```
 
-For $`d\ge2`$, this implies $`16N<d`$, so (10) is applicable. Substituting $`f=16\epsilon^2`$ and using $`\beta\le b`$,
+For $`d\ge2`$, this implies $`16N\lt d`$, so (10) is applicable. Substituting $`f=16\epsilon^2`$ and using $`\beta\le b`$,
 
 ```math
 \begin{aligned}

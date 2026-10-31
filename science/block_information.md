@@ -35,7 +35,7 @@ We first prove its multiplicity-free decomposition and the dimensions that enter
 
 ### Up and down operators
 
-For $`0\le t<n`$, define
+For $`0\le t\lt n`$, define
 
 ```math
 U_t|A\rangle=\sum_{x\notin A}|A\cup\{x\}\rangle,
@@ -49,7 +49,7 @@ D_{t+1}U_t-U_{t-1}D_t=(n-2t)I_{\mathcal M_t}.
 \qquad\text{(2)}
 ```
 
-Indeed, the first product returns $`|A\rangle`$ in $`n-t`$ ways and the second in $`t`$ ways. Their off-diagonal entries both equal one for a single-element replacement and zero otherwise. When $`t<n/2`$, (2) implies
+Indeed, the first product returns $`|A\rangle`$ in $`n-t`$ ways and the second in $`t`$ ways. Their off-diagonal entries both equal one for a single-element replacement and zero otherwise. When $`t\lt n/2`$, (2) implies
 
 ```math
 \|U_tx\|^2=\|D_tx\|^2+(n-2t)\|x\|^2,
@@ -94,7 +94,7 @@ the space $`\mathcal E_k`$ is an eigenspace of $`J_1`$, with eigenvalue
 \qquad\text{(5)}
 ```
 
-For $`0\le k<r`$, $`\theta_k-\theta_{k+1}=n-2k>0`$. The spaces $`\mathcal E_k`$ are therefore mutually orthogonal. Their dimensions sum to
+For $`0\le k\lt r`$, $`\theta_k-\theta_{k+1}=n-2k>0`$. The spaces $`\mathcal E_k`$ are therefore mutually orthogonal. Their dimensions sum to
 
 ```math
 \sum_{k=0}^r h_k=\binom nr=L,
