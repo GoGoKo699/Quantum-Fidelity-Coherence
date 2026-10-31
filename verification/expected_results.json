@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "purpose": "Finite mathematical consistency checks; universal claims require the analytical proofs.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "fidelity_checks": {
+    "purpose": "Finite checks only; universal statements require analytical proof.",
+    "haar_gaussian": [
+      {
+        "d": 3,
+        "degree": 2,
+        "columns": 2,
+        "monomials": 21,
+        "observed_min": 0.75,
+        "observed_max": 1.5,
+        "bound_min": 0.75,
+        "bound_max": 1.5
+      },
+      {
+        "d": 3,
+        "degree": 3,
+        "columns": 2,
+        "monomials": 56,
+        "observed_min": 0.44999999999999957,
+        "observed_max": 1.1250000000000002,
+        "bound_min": 0.45,
+        "bound_max": 4.5
+      },
+      {
+        "d": 4,
+        "degree": 3,
+        "columns": 2,
+        "monomials": 120,
+        "observed_min": 0.5333333333333323,
+        "observed_max": 1.066666666666667,
+        "bound_min": 0.5333333333333333,
+        "bound_max": 2.6666666666666665
+      },
+      {
+        "d": 5,
+        "degree": 3,
+        "columns": 2,
+        "monomials": 220,
+        "observed_min": 0.5952380952380941,
+        "observed_max": 1.0416666666666683,
+        "bound_min": 0.5952380952380952,
+        "bound_max": 2.0833333333333335
+      }
+    ],
+    "swap_statistic_max_residual": 4.440892098500626e-16,
+    "johnson_kernel_max_residual": 6.661338147750939e-16,
+    "status": "passed"
+  },
+  "block_checks": {
+    "johnson_eigenvalue_cases": 60,
+    "maximum_eigenvalue_residual": 2.867439668220495e-14,
+    "copy_bound_cases": 16376,
+    "status": "passed"
+  },
+  "source_sha256": {
+    "fidelity_checks.py": "7624569344cd57c85ab7c65e620bcd81d73b050bfc5e390272cb5f7077368e6f",
+    "block_checks.py": "e4b0889df9e9ee6c57d23413c7a6d5fc16e6262fb24413e1ff90630d4fd7e172",
+    "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+  }
+}

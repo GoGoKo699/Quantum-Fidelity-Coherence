@@ -1,0 +1,23 @@
+# Quantum Fidelity Coherence
+
+This repository studies root fidelity F = abs(<psi|phi>) between two fixed unknown pure states supplied as independent copies.
+
+Essential distinctions:
+- b is the total number of source copies consumed between complete quantum resets, not simultaneous memory width.
+- Only classical input-dependent information crosses a reset; every accessible future quantum register must be input-independent conditional on the complete history.
+- Source requests are classical labels. No coherent preparation oracle or inverse is supplied.
+- The root-fidelity error is uniform, including nearly orthogonal inputs.
+- The matching rate is high-dimensional; the finite-dimension gap is stated explicitly.
+
+Reader routes:
+- Overview and navigation: README.md; science/README.md.
+- Exact theorem, constants, source model, and dimension domain: science/model.md.
+- Constructive estimator, finite binary output, sample and gate accounting: science/estimator.md.
+- One-block sufficiency, Johnson eigenvalues, chi-square identity, and KL bound: science/block_information.md.
+- Haar/Gaussian norms, Bombieri product inequality, measurable adaptive transcript comparison: science/haar_comparison.md.
+- Fixed-source lower bound, adaptive allocation, stopping, and necessary coherent-run size: science/adaptive_converse.md.
+- Physical and statistical meaning, squared-overlap distinction, and pure-qubit counterexample to dimension-free sharpness: science/interpretation.md.
+- Attribution and comparison limits: references/related_work.md; references/sources.bib.
+- Finite verification and reproduction: verification/README.md.
+
+The collective measurement and grouped implementation are inherited from Fanizza et al.; unrestricted sample optimality is known from Wang–Zhang. The contribution developed here is the matching adaptive coherent-run tradeoff in the stated model. Finite numerical checks are not universal proofs or an independent expert certification.
