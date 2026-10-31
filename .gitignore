@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+verification/fidelity_checks_results.json
+verification/block_checks_results.json
