@@ -11,6 +11,9 @@ Essential distinctions:
 
 Reader routes:
 - Overview and navigation: README.md; science/README.md.
+- Scientific story and first worked example: learning/README.md; learning/bridge.md.
+- Project-defined study route: learning/map.md, exactly M01–M30, in background/preliminaries and narrative/innovation phases.
+- Single educational anchor and notation/assumption bridge: John Watrous, The Theory of Quantum Information (2018); relevant sections and missing steps in learning/bridge.md.
 - Exact theorem, constants, source model, and dimension domain: science/model.md.
 - Constructive estimator, finite binary output, sample and gate accounting: science/estimator.md.
 - One-block sufficiency, Johnson eigenvalues, chi-square identity, and KL bound: science/block_information.md.
@@ -21,3 +24,5 @@ Reader routes:
 - Finite verification and reproduction: verification/README.md.
 
 The collective measurement and grouped implementation are inherited from Fanizza et al.; unrestricted sample optimality is known from Wang–Zhang. The contribution developed here is the matching adaptive coherent-run tradeoff in the stated model. Finite numerical checks are not universal proofs or an independent expert certification.
+
+Use the learning map for conceptual dependencies and the topic pages in science/ for authoritative claims and full proofs. The anchor supplies foundations; the exact block kernel and fixed-source adaptive reduction require the separate project derivations and research-level ingredients identified in the bridge. The map describes shared understanding targets, without learner-specific assessment or progress records.

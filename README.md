@@ -2,28 +2,28 @@
 
 How many unknown-state copies must be processed coherently before a complete quantum reset to estimate their similarity efficiently?
 
-This repository develops a matching high-dimensional copy law for estimating **root fidelity** between two fixed unknown pure states. Each coherent run consumes at most $b$ total source copies; only classical information survives between runs. Measurements and source requests may adapt to the complete classical history.
+This repository develops a matching high-dimensional copy law for estimating **root fidelity** between two fixed unknown pure states. Each coherent run consumes at most $`b`$ total source copies; only classical information survives between runs. Measurements and source requests may adapt to the complete classical history.
 
 ## Main result
 
-For additive root-fidelity error $\epsilon$, constant success probability, $b\ge2$, and sufficiently large Hilbert-space dimension,
+For additive root-fidelity error $`\epsilon`$, constant success probability, $`b\ge2`$, and sufficiently large Hilbert-space dimension,
 
-$$
+```math
 N_b(\epsilon,d)
 =\Theta\!\left(
 \frac{1}{\epsilon^2}+\frac{1}{b\epsilon^4}
 \right).
-$$
+```
 
 A sufficient dimension condition is
 
-$$
+```math
 d\ge\left(\epsilon^{-2}+\frac{1}{b\epsilon^4}\right)^2.
-$$
+```
 
-Constant-size coherent runs require order $\epsilon^{-4}$ copies. Runs of order $\epsilon^{-2}$ copies attain the unrestricted order $\epsilon^{-2}$ total-copy cost. The converse allows unlimited classical memory and arbitrary classical adaptation.
+Constant-size coherent runs require order $`\epsilon^{-4}`$ copies. Runs of order $`\epsilon^{-2}`$ copies attain the unrestricted order $`\epsilon^{-2}`$ total-copy cost. The converse allows unlimited classical memory and arbitrary classical adaptation.
 
-The resource $b$ counts **copies consumed between complete resets**. It does not measure simultaneous qubit width. The source contract supplies independent copies, with classical request labels, and no preparation unitaries or their inverses.
+The resource $`b`$ counts **copies consumed between complete resets**. It does not measure simultaneous qubit width. The source contract supplies independent copies, with classical request labels, and no preparation unitaries or their inverses.
 
 The [principal theorem](science/model.md) states the exact model, finite-dimensional bounds, and a milder dimension condition for the necessary run size at optimal sample cost.
 
@@ -40,9 +40,23 @@ The [principal theorem](science/model.md) states the exact model, finite-dimensi
 
 The [science index](science/README.md) gives the connected proof route. The [related-work account](references/related_work.md) credits the earlier collective measurement, grouping strategy, unrestricted endpoint, likelihood method, and implementation tools.
 
+## Learn the project
+
+The [learning guide](learning/README.md) starts from the estimation task and connects the two sides of the proof. Its [30-milestone map](learning/map.md) moves from the background framework to the estimator, the adaptive converse, and the theorem's limits.
+
+The single educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [source-to-project bridge](learning/bridge.md) identifies the relevant sections, translates notation and assumptions, and explains which additional arguments this project supplies. The learning route is shared scientific material; no prior completion of the textbook is assumed.
+
 ## Verification
 
 The [verification guide](verification/README.md) documents reproducible checks of direct tensor moments, Johnson-matrix spectra and kernels, and small Haar–Gaussian polynomial covariance matrices. These finite calculations check specific algebraic consequences; the universal claims rest on the written proofs.
+
+From the repository root, with Python 3.12:
+
+```bash
+python3 -m pip install -r verification/requirements.txt
+python3 verification/fidelity_checks.py
+python3 verification/block_checks.py
+```
 
 ## Scope
 

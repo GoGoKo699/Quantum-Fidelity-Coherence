@@ -20,10 +20,10 @@ The scripts write ignored local result files beside themselves. The committed [e
 
 | Calculation | Independent construction | Scope and observed outcome |
 | --- | --- | --- |
-| Cross-SWAP moments | Build the full pure tensor vector and apply register permutations directly | $m=1,\ldots,5$, six squared overlaps including both endpoints; maximum residual $4.45\times10^{-16}$ |
-| Johnson kernel | Build subset-distance Gram matrices and take their trace products | Balanced and unbalanced finite counts; maximum residual $6.67\times10^{-16}$; positive semidefiniteness checked |
-| Johnson eigenvalues | Diagonalize the full Gram matrix and compare with the explicit two-row eigenvalue/multiplicity list | 60 cases; maximum residual $2.87\times10^{-14}$ |
-| Haar–Gaussian norm comparison | Construct the full homogeneous-monomial covariance on two matrix columns using Weingarten inversion, then compare generalized eigenvalues | $(d,t)=(3,2),(3,3),(4,3),(5,3)$, with 21, 56, 120 and 220 monomials; all tested norms inside the proved bounds |
+| Cross-SWAP moments | Build the full pure tensor vector and apply register permutations directly | $`m=1,\ldots,5`$, six squared overlaps including both endpoints; maximum residual $`4.45\times10^{-16}`$ |
+| Johnson kernel | Build subset-distance Gram matrices and take their trace products | Balanced and unbalanced finite counts; maximum residual $`6.67\times10^{-16}`$; positive semidefiniteness checked |
+| Johnson eigenvalues | Diagonalize the full Gram matrix and compare with the explicit two-row eigenvalue/multiplicity list | 60 cases; maximum residual $`2.87\times10^{-14}`$ |
+| Haar–Gaussian norm comparison | Construct the full homogeneous-monomial covariance on two matrix columns using Weingarten inversion, then compare generalized eigenvalues | $`(d,t)=(3,2),(3,3),(4,3),(5,3)`$, with 21, 56, 120 and 220 monomials; all tested norms inside the proved bounds |
 | Integer copy budget | Evaluate the actual ceilings in the finite-precision algorithm | 16,376 pairs of error and run-cap parameters; all obey the stated copy and run bounds |
 
 The tensor and Gram checks compare different mathematical representations of the same quantities. The copy-budget check protects the implementation of integer rounding; its role is narrower than the operator and covariance checks.
