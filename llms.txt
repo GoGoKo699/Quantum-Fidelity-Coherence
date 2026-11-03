@@ -26,7 +26,7 @@ Reader routes:
 - General pure-stock Haar/Gaussian norms, Bombieri product inequality, and measurable adaptive transcript comparison: science/haar_comparison.md.
 - Fixed-source lower bound, adaptive allocation, stopping, and necessary coherent-run size: science/adaptive_converse.md.
 - Sister transfer, four-source padding, phase-specific block input, large-dimension endpoint, and fixed-dimension counterexample: science/loop_phase.md; learning/bridge.md Section 7.
-- Authoritative phase block-information and coherent-run proofs: https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/block-information.md and https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/coherent-runs.md.
+- Authoritative phase block-information and coherent-run proofs: https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/block-information.md and https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/coherent-runs.md.
 - Physical and statistical meaning, squared-overlap distinction, and pure-qubit counterexample to dimension-free sharpness: science/interpretation.md.
 - Attribution and comparison limits: references/related_work.md; references/sources.bib.
 - Finite verification and reproduction: verification/README.md.

@@ -34,7 +34,7 @@ D\!\left(\omega_\phi^{\mathbf r}\middle\Vert
 \qquad\text{(1)}
 ```
 
-This is uniform in the multiplicities and in both phases. The [authoritative block-information proof](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/block-information.md) reduces the stock to its permutation-orbit Gram matrix $`C_\phi`$. On the subspace with the prescribed label counts, scalar Jensen gives $`C_\phi\succeq e^{-2tc^2}I`$. An entry can depend on the phase only after at least four labels change around the cycle. Counting these entries and bounding quantum relative entropy by the corresponding chi-square expression proves (1).
+This is uniform in the multiplicities and in both phases. The [authoritative block-information proof](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/block-information.md) reduces the stock to its permutation-orbit Gram matrix $`C_\phi`$. On the subspace with the prescribed label counts, scalar Jensen gives $`C_\phi\succeq e^{-2tc^2}I`$. An entry can depend on the phase only after at least four labels change around the cycle. Counting these entries and bounding quantum relative entropy by the corresponding chi-square expression proves (1).
 
 For exactly one copy of each label, the optimal invariant block quantum Fisher information is
 
@@ -81,7 +81,7 @@ Applying Pinsker and paying (2) once for each phase yields the fixed-source theo
 \qquad\text{(3)}
 ```
 
-The [full phase converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/coherent-runs.md) owns the detailed statement, padding argument and consequences. Equations (1)–(3) show the precise exchange between the projects: the phase stock has a new information bound, while the fixed-source comparison method is shared.
+The [full phase converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/coherent-runs.md) owns the detailed statement, padding argument and consequences. Equations (1)–(3) show the precise exchange between the projects: the phase stock has a new information bound, while the fixed-source comparison method is shared.
 
 ## 4. The coherence threshold and its limits
 
@@ -112,4 +112,4 @@ The dimension qualification is essential. At fixed finite $`d`$, separate-copy t
 
 The replica hierarchy and adaptive Haar-likelihood precedent of [Ye, Liu and Deng](https://arxiv.org/pdf/2509.24000v1), particularly Theorem 29 and Lemma 30, are inherited foundations. [Oszmaniec, Brod and Galvão](https://arxiv.org/pdf/2109.10006v1) supply the Bargmann-invariant framework, spanning-tree phase gauge and direct cycle test. Neither attribution is replaced by this phase/reset theorem.
 
-Read the [root-fidelity model](model.md) and [general Haar comparison](haar_comparison.md) for this repository's own contribution. Read the sister project's [block information](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/block-information.md) and [coherent-run converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/coherent-runs.md) for the authoritative phase proofs. The targets and their precision conventions remain distinct: root fidelity concerns two-state overlap magnitude, while this application concerns the argument of a four-state product.
+Read the [root-fidelity model](model.md) and [general Haar comparison](haar_comparison.md) for this repository's own contribution. Read the sister project's [block information](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/block-information.md) and [coherent-run converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/science/coherent-runs.md) for the authoritative phase proofs. The targets and their precision conventions remain distinct: root fidelity concerns two-state overlap magnitude, while this application concerns the argument of a four-state product.
