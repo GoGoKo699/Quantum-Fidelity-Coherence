@@ -4,6 +4,12 @@ How many unknown-state copies must be processed coherently before a complete qua
 
 This repository develops a matching high-dimensional copy law for estimating **root fidelity** between two fixed unknown pure states. Each coherent run consumes at most $`b`$ total source copies; only classical information survives between runs. Measurements and source requests may adapt to the complete classical history.
 
+## Sister result: coherence for a loop phase
+
+[Quantum Holonomy Sampling](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling) asks how many copies are needed to estimate the phase around a loop of unknown pure states. Together the projects show that, for a sparse four-state cycle and fixed small phase error, copy-optimal $`N=O(c^{-2})`$ estimation requires runs consuming $`b=\Omega(c^{-2})`$ copies in a sufficient large-dimension regime. Here $`c`$ is the neighboring overlap amplitude.
+
+The scientific exchange is precise: this repository owns the **fixed-source adaptive transcript comparison**, extended to arbitrary fixed pure stocks; Holonomy owns the **phase-specific block-information theorem** and coherent upper bound. The root-fidelity formula below is not a phase theorem. The [loop-phase application](science/loop_phase.md) states the distinct assumptions, dimension condition, proof route and fixed-dimensional tomography exception, with versioned links to the authoritative phase proofs.
+
 ## Main result
 
 For additive root-fidelity error $`\epsilon`$, constant success probability, $`b\ge2`$, and sufficiently large Hilbert-space dimension,
@@ -36,6 +42,7 @@ The [principal theorem](science/model.md) states the exact model, finite-dimensi
 | How much information can any one run reveal? | [Exact block information](science/block_information.md) |
 | Why can the lower bound handle fixed unknown states? | [Haar comparison](science/haar_comparison.md) |
 | How are arbitrary source choices and stopping covered? | [Adaptive converse](science/adaptive_converse.md) |
+| How does the transcript method establish a phase-specific sister result? | [Loop-phase application](science/loop_phase.md) |
 | What does the threshold mean, and where does it cease to apply? | [Interpretation](science/interpretation.md) |
 
 The [science index](science/README.md) gives the connected proof route. The [related-work account](references/related_work.md) credits the earlier collective measurement, grouping strategy, unrestricted endpoint, likelihood method, and implementation tools.

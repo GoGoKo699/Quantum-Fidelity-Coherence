@@ -35,3 +35,7 @@ These are finite deterministic numerical checks. They do not certify all dimensi
 The proof review covers the source-access contract, conditional reset rule, arbitrary within-run allocation and stopping, Haar/Gaussian sector constants, continuous-outcome refinement, and the direction of the square-root error bound. The implementation account invokes Krovi's published Schur-transform algorithm; no complete gate-level circuit or noisy-device experiment is supplied.
 
 Repository navigation and source mathematics are reviewed separately from these numerical checks. A local pass is not evidence that a hosting renderer displays every formula correctly.
+
+## Shared loop-phase result
+
+The [loop-phase application](../science/loop_phase.md) uses this repository's generic pure-stock transcript theorem with a different block-information bound. The authoritative phase proof and its finite checks live in [Quantum Holonomy Sampling](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/5502b63a6635ec24d8a0f082ca37846bdec35c3d/verification/README.md): 16 four-copy cases check the exact commuting optimum and 27 fixed-stock cases check the uniform eigenvalue, Hilbert–Schmidt and divergence bounds. Their recorded results identify the tested source files and dependency versions. These finite cases do not simulate all adaptive histories; the general transfer is proved analytically in [Haar comparison](../science/haar_comparison.md).

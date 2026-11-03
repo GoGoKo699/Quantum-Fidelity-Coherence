@@ -6,25 +6,25 @@ The argument combines an exact Haar–Gaussian polynomial norm comparison with t
 
 ## 1. Statement and operational setting
 
-Fix integers $`d\ge 2`$, $`b\ge 1`$, and $`K\ge 1`$. Write
+Fix integers $`d\ge2`$, $`t\ge1`$ and $`K\ge1`$. Let $`\theta`$ label any family of normalized pure stock vectors
 
 ```math
-\begin{aligned}
-t&=4b,\qquad M=Kt,\qquad 0\le f\le1,\\
-v_f&=e_1^{\otimes 2b}\otimes
-\bigl(\sqrt f\,e_1+\sqrt{1-f}\,e_2\bigr)^{\otimes 2b},
-\end{aligned}
+v_\theta\in(\mathbb C^d)^{\otimes t},
+\qquad \|v_\theta\|=1,
+\qquad M=Kt.
 \qquad\text{(1)}
 ```
 
-Each of the $`K`$ superblocks receives a stock of $`2b`$ copies of each source. Thus its input is the normalized pure state
+Each superblock receives the stock
 
 ```math
-v_f(U)=U^{\otimes t}v_f.
+v_\theta(U)=U^{\otimes t}v_\theta.
 \qquad\text{(2)}
 ```
 
-In the **stationary experiment**, one $`U\sim\mathrm{Haar}(U(d))`$ supplies every superblock. In the **refreshed experiment**, superblock $`j`$ receives $`v_f(U_j)`$, with the $`U_j`$ independent and Haar distributed. The overlap within each stock remains $`\sqrt f`$.
+The vector may contain copies of two, four or more labeled pure sources. The theorem uses only its normalization and its common-unitary tensor form; no root-fidelity relation is assumed.
+
+In the **stationary experiment**, one $`U\sim\mathrm{Haar}(U(d))`$ supplies every superblock. In the **refreshed experiment**, superblock $`j`$ receives $`v_\theta(U_j)`$, with the $`U_j`$ independent and Haar distributed. The parameter $`\theta`$ and all within-stock relations remain the same. Refreshing is an auxiliary comparison experiment, not a change to the fixed-source model.
 
 The measurement in a superblock can depend arbitrarily on the previous classical transcript. It can contain internal measurements, classically chosen source requests, known ancillas, and arbitrary processing of the supplied stock. Unused stock can be discarded. Every quantum output is discarded at the boundary; future controls depend only on classical information. Conditional on the classical history, the next quantum workspace must therefore be preparable in a known state without access to the unknown orientation.
 
@@ -32,7 +32,7 @@ A quantum register or entangled ancillary system carrying an unknown conditional
 
 Initial classical randomness is permitted and must be independent of $`U`$. Outcome spaces are standard Borel spaces, and instruments and controls are measurable, as in the usual probabilistic formulation of an adaptive protocol.
 
-Let $`P_f^{\mathrm{stat}}`$ and $`P_f^{\mathrm{fresh}}`$ denote the laws of the complete reported classical transcript. Define
+Let $`P_\theta^{\mathrm{stat}}`$ and $`P_\theta^{\mathrm{fresh}}`$ denote the laws of the complete reported classical transcript. Define
 
 ```math
 (d)_{\uparrow s}=\prod_{r=0}^{s-1}(d+r),
@@ -46,8 +46,8 @@ with an empty product equal to one.
 **Theorem 1 — fixed-orientation comparison.** If $`M\le d/2`$, then the two transcript laws admit a common refinement whose densities satisfy
 
 ```math
-p_f^{\mathrm{stat}}(\ell)
-\ge \kappa\,p_f^{\mathrm{fresh}}(\ell),
+p_\theta^{\mathrm{stat}}(\ell)
+\ge \kappa\,p_\theta^{\mathrm{fresh}}(\ell),
 \qquad
 \kappa=
 \frac{\bigl((d)_{\downarrow t}\bigr)^K}{(d)_{\uparrow M}}.
@@ -58,7 +58,7 @@ Consequently, with $`\mathrm{TV}(P,Q)=\sup_A|P(A)-Q(A)|`$,
 
 ```math
 \begin{aligned}
-\mathrm{TV}(P_f^{\mathrm{stat}},P_f^{\mathrm{fresh}})
+\mathrm{TV}(P_\theta^{\mathrm{stat}},P_\theta^{\mathrm{fresh}})
 &\le 1-\kappa\\
 &\le 1-\exp\!\left[-\frac{M(t-1)+M(M-1)/2}{d}\right]\\
 &\le \frac{M(t-1)+M(M-1)/2}{d}\\
@@ -68,9 +68,21 @@ Consequently, with $`\mathrm{TV}(P,Q)=\sup_A|P(A)-Q(A)|`$,
 \qquad\text{(5)}
 ```
 
-The bound is uniform in $`f`$, the number of outcomes, the classical computation, and every history-dependent choice of the measurement. It bounds transcript distributions, not the trace distance between the full stationary and refreshed quantum input states.
+The bound is uniform in $`\theta`$ and the normalized vector $`v_\theta`$, the number of outcomes, the classical computation, and every history-dependent choice of the measurement. It bounds transcript distributions, not the trace distance between the full stationary and refreshed quantum input states.
 
-When an operational reduction supplies $`M\le8N`$ padded copies, the last bound in (5) is at most $`96N^2/d`$, subject to $`M\le d/2`$. Padding counts supplied stock, including unused copies and dummy superblocks. Its role is to place every branch in one fixed input space; it is not an assumption that the original algorithm uses a deterministic source allocation.
+### 1.1 Root-fidelity specialization
+
+The [adaptive root-fidelity converse](adaptive_converse.md#2-a-fixed-stock-simulation-of-arbitrary-source-choices) uses $`t=4b`$ and
+
+```math
+v_f=e_1^{\otimes2b}\otimes
+\bigl(\sqrt f\,e_1+\sqrt{1-f}\,e_2\bigr)^{\otimes2b},
+\qquad 0\le f\le1.
+```
+
+This is the stock of $`2b`$ copies from each of two sources, with root fidelity $`\sqrt f`$. Its padding reduction supplies $`M\le8N`$ copies, so (5) gives $`96N^2/d`$, subject to $`M\le d/2`$. This is the comparison used in the root-fidelity lower bound.
+
+The [four-source loop-phase application](https://github.com/GoGoKo699/Quantum-Fidelity-Coherence/blob/main/science/loop_phase.md) uses $`t=8b`$ instead and obtains $`384N^2/d`$ per fixed/refreshed comparison. In either application, padding includes unused copies and dummy superblocks. It places every adaptive branch in one fixed input space and does not assume a deterministic source allocation.
 
 ## 2. Exact norms of homogeneous matrix polynomials
 
@@ -282,7 +294,7 @@ The opposite directions of the two factorials are material. For $`P(X)=X_{11}^2`
 
 ## 3. The complex homogeneous product inequality
 
-**Lemma 2 — Gaussian Bombieri inequality.** Let $`Z\in\mathbb C^q`$ have independent circular Gaussian coordinates of variance $`\sigma^2>0`$. For homogeneous complex polynomials $`P_1,\ldots,P_K`$,
+**Lemma 2 — Gaussian Bombieri inequality.** Let $`Z\in\mathbb C^q`$ have independent circular Gaussian coordinates of variance $`\sigma^2\gt 0`$. For homogeneous complex polynomials $`P_1,\ldots,P_K`$,
 
 ```math
 \mathbb E\left|\prod_{j=1}^K P_j(Z)\right|^2
@@ -364,7 +376,7 @@ E_{j,h}(y)=\sum_a |w_{j,h,y,a}\rangle\langle w_{j,h,y,a}|.
 The refined outcome $`(y,a)`$ has probability
 
 ```math
-\left|\left\langle w_{j,h,y,a},U^{\otimes t}v_f\right\rangle\right|^2.
+\left|\left\langle w_{j,h,y,a},U^{\otimes t}v_\theta\right\rangle\right|^2.
 \qquad\text{(29)}
 ```
 
@@ -417,7 +429,7 @@ Consequently its outcome density for input (2) is
 |P_{j,\ell}(U)|^2,
 \qquad
 P_{j,\ell}(X)
-=\langle z_{j,h,y,a},X^{\otimes t}v_f\rangle.
+=\langle z_{j,h,y,a},X^{\otimes t}v_\theta\rangle.
 \qquad\text{(34)}
 ```
 
@@ -430,7 +442,7 @@ Adjoining the source-independent initial seed, and successively using these kern
 Fix a refined transcript $`\ell`$, including the initial seed. Suppress $`\ell`$ from the polynomial notation. For the stationary experiment, conditioning first on its one Haar unitary gives
 
 ```math
-p_f^{\mathrm{stat}}(\ell)
+p_\theta^{\mathrm{stat}}(\ell)
 =\mathbb E_U\prod_{j=1}^K|P_j(U)|^2
 =\left\|\prod_{j=1}^K P_j\right\|_{\mathrm H}^2.
 \qquad\text{(35)}
@@ -439,7 +451,7 @@ p_f^{\mathrm{stat}}(\ell)
 For the refreshed experiment, the unitary entering superblock $`j`$ is independent of its previous history. Hence
 
 ```math
-p_f^{\mathrm{fresh}}(\ell)
+p_\theta^{\mathrm{fresh}}(\ell)
 =\prod_{j=1}^K\mathbb E_U|P_j(U)|^2
 =\prod_{j=1}^K\|P_j\|_{\mathrm H}^2.
 \qquad\text{(36)}
@@ -451,7 +463,7 @@ The product polynomial has degree $`M=Kt`$. Apply the lower bound of (22) at deg
 
 ```math
 \begin{aligned}
-p_f^{\mathrm{stat}}(\ell)
+p_\theta^{\mathrm{stat}}(\ell)
 &\ge \frac{d^M}{(d)_{\uparrow M}}
 \left\|\prod_j P_j\right\|_{\mathrm G}^2\\
 &\ge \frac{d^M}{(d)_{\uparrow M}}
@@ -461,18 +473,18 @@ p_f^{\mathrm{stat}}(\ell)
 \prod_j\|P_j\|_{\mathrm H}^2\\
 &=\frac{\bigl((d)_{\downarrow t}\bigr)^K}
 {(d)_{\uparrow M}}
-p_f^{\mathrm{fresh}}(\ell).
+p_\theta^{\mathrm{fresh}}(\ell).
 \end{aligned}
 \qquad\text{(37)}
 ```
 
-Zero factors cause no division problem: every step is an inequality between nonnegative quantities. The measure-theoretic construction above makes (37) an almost-everywhere density statement. Integrating it proves the measure domination $`P_f^{\mathrm{stat}}\ge\kappa P_f^{\mathrm{fresh}}`$ on refined transcripts.
+Zero factors cause no division problem: every step is an inequality between nonnegative quantities. The measure-theoretic construction above makes (37) an almost-everywhere density statement. Integrating it proves the measure domination $`P_\theta^{\mathrm{stat}}\ge\kappa P_\theta^{\mathrm{fresh}}`$ on refined transcripts.
 
-Both measures are normalized because both experiments are complete POVM protocols on normalized pure states. For $`0\le\kappa<1`$, domination means
+Both measures are normalized because both experiments are complete POVM protocols on normalized pure states. For $`0\le\kappa\lt 1`$, domination means
 
 ```math
-P_f^{\mathrm{stat}}
-=\kappa P_f^{\mathrm{fresh}}+(1-\kappa)R
+P_\theta^{\mathrm{stat}}
+=\kappa P_\theta^{\mathrm{fresh}}+(1-\kappa)R
 \qquad\text{(38)}
 ```
 
