@@ -82,7 +82,7 @@ v_f=e_1^{\otimes2b}\otimes
 
 This is the stock of $`2b`$ copies from each of two sources, with root fidelity $`\sqrt f`$. Its padding reduction supplies $`M\le8N`$ copies, so (5) gives $`96N^2/d`$, subject to $`M\le d/2`$. This is the comparison used in the root-fidelity lower bound.
 
-The [four-source loop-phase application](loop_phase.md) uses $`t=8b`$ instead and obtains $`384N^2/d`$ per fixed/refreshed comparison. In either application, padding includes unused copies and dummy superblocks. It places every adaptive branch in one fixed input space and does not assume a deterministic source allocation.
+The [four-source loop-phase application](https://github.com/GoGoKo699/Quantum-Fidelity-Coherence/blob/main/science/loop_phase.md) uses $`t=8b`$ instead and obtains $`384N^2/d`$ per fixed/refreshed comparison. In either application, padding includes unused copies and dummy superblocks. It places every adaptive branch in one fixed input space and does not assume a deterministic source allocation.
 
 ## 2. Exact norms of homogeneous matrix polynomials
 
