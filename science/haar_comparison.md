@@ -294,7 +294,7 @@ The opposite directions of the two factorials are material. For $`P(X)=X_{11}^2`
 
 ## 3. The complex homogeneous product inequality
 
-**Lemma 2 — Gaussian Bombieri inequality.** Let $`Z\in\mathbb C^q`$ have independent circular Gaussian coordinates of variance $`\sigma^2>0`$. For homogeneous complex polynomials $`P_1,\ldots,P_K`$,
+**Lemma 2 — Gaussian Bombieri inequality.** Let $`Z\in\mathbb C^q`$ have independent circular Gaussian coordinates of variance $`\sigma^2\gt 0`$. For homogeneous complex polynomials $`P_1,\ldots,P_K`$,
 
 ```math
 \mathbb E\left|\prod_{j=1}^K P_j(Z)\right|^2
@@ -480,7 +480,7 @@ p_\theta^{\mathrm{fresh}}(\ell).
 
 Zero factors cause no division problem: every step is an inequality between nonnegative quantities. The measure-theoretic construction above makes (37) an almost-everywhere density statement. Integrating it proves the measure domination $`P_\theta^{\mathrm{stat}}\ge\kappa P_\theta^{\mathrm{fresh}}`$ on refined transcripts.
 
-Both measures are normalized because both experiments are complete POVM protocols on normalized pure states. For $`0\le\kappa<1`$, domination means
+Both measures are normalized because both experiments are complete POVM protocols on normalized pure states. For $`0\le\kappa\lt 1`$, domination means
 
 ```math
 P_\theta^{\mathrm{stat}}

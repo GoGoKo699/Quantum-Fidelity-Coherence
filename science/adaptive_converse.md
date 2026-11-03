@@ -20,7 +20,7 @@ Every realization is a fixed pair of pure states with root fidelity $`\sqrt f`$.
 
 Let $`P_f`$ denote the complete classical transcript law of an arbitrary allowed algorithm on this ensemble. The algorithm may be noncovariant, keep an unbounded classical record, and adapt to that record.
 
-For $`0<\epsilon\le1/8`$, take
+For $`0\lt \epsilon\le1/8`$, take
 
 ```math
 f_0=0,
@@ -147,7 +147,7 @@ The first term is information accumulated from coherent stocks. The second contr
 Suppose, toward contradiction, that an estimator satisfying the model has
 
 ```math
-N<2^{-16}\min\left\{\sqrt d,\frac{1}{b\epsilon^4}\right\}.
+N\lt 2^{-16}\min\left\{\sqrt d,\frac{1}{b\epsilon^4}\right\}.
 \qquad\text{(11)}
 ```
 
@@ -158,8 +158,8 @@ For $`d\ge2`$, this implies $`16N\lt d`$, so (10) is applicable. Substituting $`
 \mathrm{TV}(P_{16\epsilon^2},P_0)
 &\le32\epsilon^2\sqrt{Nb}
 +192N^2/d\\
-&<32\sqrt{2^{-16}}+192\,2^{-32}\\
-&=\frac18+192\,2^{-32}<\frac13.
+&\lt 32\sqrt{2^{-16}}+192\,2^{-32}\\
+&=\frac18+192\,2^{-32}\lt \frac13.
 \end{aligned}
 \qquad\text{(12)}
 ```

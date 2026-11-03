@@ -34,7 +34,7 @@ D\!\left(\omega_\phi^{\mathbf r}\middle\Vert
 \qquad\text{(1)}
 ```
 
-This is uniform in the multiplicities and in both phases. The [authoritative block-information proof](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/block-information.md) reduces the stock to its permutation-orbit Gram matrix $`C_\phi`$. On the subspace with the prescribed label counts, scalar Jensen gives $`C_\phi\succeq e^{-2tc^2}I`$. An entry can depend on the phase only after at least four labels change around the cycle. Counting these entries and bounding quantum relative entropy by the corresponding chi-square expression proves (1).
+This is uniform in the multiplicities and in both phases. The [authoritative block-information proof](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/block-information.md) reduces the stock to its permutation-orbit Gram matrix $`C_\phi`$. On the subspace with the prescribed label counts, scalar Jensen gives $`C_\phi\succeq e^{-2tc^2}I`$. An entry can depend on the phase only after at least four labels change around the cycle. Counting these entries and bounding quantum relative entropy by the corresponding chi-square expression proves (1).
 
 For exactly one copy of each label, the optimal invariant block quantum Fisher information is
 
@@ -53,7 +53,7 @@ Set $`\beta=\min\{b,N\}`$ and $`K=\lceil N/\beta\rceil`$. Group complete runs un
 There are $`K`$ stocks, each with $`t=8\beta`$ copies, and their total padded count obeys $`M\le16N`$. Let $`P_\phi`$ be the actual fixed-orientation transcript law, and let $`Q_\phi`$ be the auxiliary law with independent common orientations in successive stocks. The [general pure-stock comparison](haar_comparison.md#1-statement-and-operational-setting) gives
 
 ```math
-\operatorname{TV}(P_\phi,Q_\phi)
+\mathrm{TV}(P_\phi,Q_\phi)
 \le\frac{384N^2}{d},
 \qquad d\ge32N.
 \qquad\text{(2)}
@@ -72,7 +72,7 @@ Applying Pinsker and paying (2) once for each phase yields the fixed-source theo
 
 ```math
 \boxed{
-\operatorname{TV}(P_\phi,P_\theta)
+\mathrm{TV}(P_\phi,P_\theta)
 \le
 \sqrt{\frac{32768}{3}}\,c^4\sqrt{Nb^3}\,e^{16bc^2}
 +\frac{768N^2}{d},
@@ -81,7 +81,7 @@ Applying Pinsker and paying (2) once for each phase yields the fixed-source theo
 \qquad\text{(3)}
 ```
 
-The [full phase converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/coherent-runs.md) owns the detailed statement, padding argument and consequences. Equations (1)–(3) show the precise exchange between the projects: the phase stock has a new information bound, while the fixed-source comparison method is shared.
+The [full phase converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/coherent-runs.md) owns the detailed statement, padding argument and consequences. Equations (1)–(3) show the precise exchange between the projects: the phase stock has a new information bound, while the fixed-source comparison method is shared.
 
 ## 4. The coherence threshold and its limits
 
@@ -112,4 +112,4 @@ The dimension qualification is essential. At fixed finite $`d`$, separate-copy t
 
 The replica hierarchy and adaptive Haar-likelihood precedent of [Ye, Liu and Deng](https://arxiv.org/pdf/2509.24000v1), particularly Theorem 29 and Lemma 30, are inherited foundations. [Oszmaniec, Brod and Galvão](https://arxiv.org/pdf/2109.10006v1) supply the Bargmann-invariant framework, spanning-tree phase gauge and direct cycle test. Neither attribution is replaced by this phase/reset theorem.
 
-Read the [root-fidelity model](model.md) and [general Haar comparison](haar_comparison.md) for this repository's own contribution. Read the sister project's [block information](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/block-information.md) and [coherent-run converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/coherent-runs.md) for the authoritative phase proofs. The targets and their precision conventions remain distinct: root fidelity concerns two-state overlap magnitude, while this application concerns the argument of a four-state product.
+Read the [root-fidelity model](model.md) and [general Haar comparison](haar_comparison.md) for this repository's own contribution. Read the sister project's [block information](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/block-information.md) and [coherent-run converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/36297ca5f51fbfa361f5cd5184e901fb66b3b46e/science/coherent-runs.md) for the authoritative phase proofs. The targets and their precision conventions remain distinct: root fidelity concerns two-state overlap magnitude, while this application concerns the argument of a four-state product.

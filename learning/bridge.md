@@ -239,7 +239,7 @@ The sharp phase bound does that. For a stock containing $`t`$ copies in total, i
 ```math
 D(\omega_\phi\Vert\omega_\theta)
 \le \frac83\,t^4c^8e^{4tc^2},
-\qquad 0<c\le\frac14,
+\qquad 0\lt c\le\frac14,
 ```
 
 where $`\omega`$ denotes the common-orientation twirled stock and logarithms are natural. Two ingredients explain its useful scale. A phase-dependent Gram entry requires an exchange winding around all four labels, so it first appears after at least four changed positions. Also the Gram operator has a lower spectral floor $`e^{-2tc^2}`$; the phase signal is not concealed in arbitrarily rare zero-probability outcomes. Together these statements control information uniformly for stocks growing with $`c^{-2}`$. A fixed-stock small-$`c`$ expansion alone would not supply that uniformity.
@@ -248,7 +248,7 @@ where $`\omega`$ denotes the common-orientation twirled stock and logarithms are
 
 The four-source proof presupplies enough copies of every label to simulate adaptive requests inside each grouped run. A fixed refined transcript still has amplitudes homogeneous in one common unitary. The same Haar–Gaussian and homogeneous-product comparison controls the difference between its fixed-source law and its auxiliary refreshed law. Quantum data processing and the classical chain rule then accumulate the phase-specific block bound.
 
-For any fixed angular accuracy $`0<\epsilon\le\pi/16`$, this proves the following endpoint statement for $`0<c\le1/4`$. If a uniformly $`2/3`$-successful phase estimator uses total copies $`N\le C_0c^{-2}`$, with $`C_0\ge1`$, and
+For any fixed angular accuracy $`0\lt \epsilon\le\pi/16`$, this proves the following endpoint statement for $`0\lt c\le1/4`$. If a uniformly $`2/3`$-successful phase estimator uses total copies $`N\le C_0c^{-2}`$, with $`C_0\ge1`$, and
 
 ```math
 d\ge9216C_0^2c^{-4},

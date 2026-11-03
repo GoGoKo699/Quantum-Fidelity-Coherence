@@ -131,10 +131,10 @@ Perform $`K`$ independent runs of the measurement in (4). Let $`X_t`$ be the sco
 
 where $`\Pi_{[0,1]}`$ clips a real number to $`[0,1]`$.
 
-**Lemma 1 (uniform square-root error).** For every $`0<\eta\le1`$ and every $`f\in[0,1]`$,
+**Lemma 1 (uniform square-root error).** For every $`0\lt \eta\le1`$ and every $`f\in[0,1]`$,
 
 ```math
-\Pr\{|\widehat F-\sqrt f|>\eta\}
+\Pr\{|\widehat F-\sqrt f|\gt \eta\}
 \le\frac1{Km^2\eta^4}+\frac2{Km\eta^2}.
 \qquad\text{(6)}
 ```
@@ -142,9 +142,9 @@ where $`\Pi_{[0,1]}`$ clips a real number to $`[0,1]`$.
 **Proof.** First, for any real $`x`$,
 
 ```math
-\left|\sqrt{\Pi_{[0,1]}(x)}-\sqrt f\right|>\eta
+\left|\sqrt{\Pi_{[0,1]}(x)}-\sqrt f\right|\gt \eta
 \quad\Longrightarrow\quad
-|x-f|>\eta\max\{\sqrt f,\eta\}.
+|x-f|\gt \eta\max\{\sqrt f,\eta\}.
 \qquad\text{(7)}
 ```
 
@@ -152,7 +152,7 @@ To see this, suppose $`f\ge\eta^2`$. An upper root error requires an increase in
 $`2\eta\sqrt f+\eta^2`$, which is at least $`\eta\sqrt f`$.
 A lower root error, when possible, requires a decrease of more than
 $`2\eta\sqrt f-\eta^2\ge\eta\sqrt f`$.
-If $`f<\eta^2`$, a lower root error is impossible, and an upper root error requires an increase greater than $`\eta^2`$.
+If $`f\lt \eta^2`$, a lower root error is impossible, and an upper root error requires an increase greater than $`\eta^2`$.
 Finally, clipping cannot increase the distance from $`f\in[0,1]`$, so the same lower bound applies to $`|x-f|`$.
 
 Independence of the runs and (3) give
@@ -166,7 +166,7 @@ Apply Chebyshev's inequality at the threshold in (7):
 
 ```math
 \begin{aligned}
-\Pr\{|\widehat F-\sqrt f|>\eta\}
+\Pr\{|\widehat F-\sqrt f|\gt \eta\}
 &\le
 \frac{1/(Km^2)+2f/(Km)}{\eta^2\max\{f,\eta^2\}}\\
 &\le\frac1{Km^2\eta^4}+\frac2{Km\eta^2}.
@@ -180,7 +180,7 @@ $`\eta^2+2\eta\sqrt f`$ is an upper-tail squared displacement and cannot be used
 
 ## 3. A fully specified finite-precision algorithm
 
-**Theorem 2 (bounded-run upper bound).** Let $`d\ge2`$, let $`b\ge2`$ be an integer, and let $`0<\epsilon\le1/8`$. There is an algorithm that consumes at most $`b`$ source copies in each run and returns a finite binary number $`\widetilde F`$ such that, for every fixed pair of pure states,
+**Theorem 2 (bounded-run upper bound).** Let $`d\ge2`$, let $`b\ge2`$ be an integer, and let $`0\lt \epsilon\le1/8`$. There is an algorithm that consumes at most $`b`$ source copies in each run and returns a finite binary number $`\widetilde F`$ such that, for every fixed pair of pure states,
 
 ```math
 \Pr\{|\widetilde F-F|\le\epsilon\}\ge\frac34.

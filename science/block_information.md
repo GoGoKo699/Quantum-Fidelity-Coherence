@@ -70,7 +70,7 @@ h_k=\binom nk-\binom n{k-1},
 ```
 
 Lift $`\mathcal H_k`$ to $`\mathcal M_r`$ by the injective map
-$`U_{r-1}\cdots U_k`$, with the identity map when $`k=r`$. Denote its image by $`\mathcal E_k`$. Repeated use of (2) shows that, for $`h\in\mathcal H_k`$ and $`r>k`$,
+$`U_{r-1}\cdots U_k`$, with the identity map when $`k=r`$. Denote its image by $`\mathcal E_k`$. Repeated use of (2) shows that, for $`h\in\mathcal H_k`$ and $`r\gt k`$,
 
 ```math
 D_rU_{r-1}\cdots U_k h
@@ -94,7 +94,7 @@ the space $`\mathcal E_k`$ is an eigenspace of $`J_1`$, with eigenvalue
 \qquad\text{(5)}
 ```
 
-For $`0\le k\lt r`$, $`\theta_k-\theta_{k+1}=n-2k>0`$. The spaces $`\mathcal E_k`$ are therefore mutually orthogonal. Their dimensions sum to
+For $`0\le k\lt r`$, $`\theta_k-\theta_{k+1}=n-2k\gt 0`$. The spaces $`\mathcal E_k`$ are therefore mutually orthogonal. Their dimensions sum to
 
 ```math
 \sum_{k=0}^r h_k=\binom nr=L,
@@ -179,7 +179,7 @@ p_k(f)
 These are also the Schur probabilities of $`\omega_f^{r,s}`$, since the projectors commute with the common unitary. At $`f=0`$, all the physical vectors in (8) are orthonormal, so $`G_0=I`$ and
 
 ```math
-\boxed{p_k(0)=h_k/L>0.}
+\boxed{p_k(0)=h_k/L\gt 0.}
 \qquad\text{(12)}
 ```
 

@@ -46,7 +46,7 @@ Let $`N_b(\epsilon,d)`$ be the smallest worst-case copy budget among protocols o
 
 ## 3. Main theorem
 
-**Theorem 1.** For integers $`d\ge2`$, $`b\ge2`$, and $`0<\epsilon\le1/8`$,
+**Theorem 1.** For integers $`d\ge2`$, $`b\ge2`$, and $`0\lt \epsilon\le1/8`$,
 
 ```math
 \boxed{

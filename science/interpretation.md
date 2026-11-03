@@ -17,7 +17,7 @@ The two terms have different roles. The first is the intrinsic cost of learning 
 | Run cap, with integer rounding understood | Total-copy order |
 | --- | --- |
 | $`b=\Theta(1)`$, $`b\ge2`$ | $`\epsilon^{-4}`$ |
-| $`b=\Theta(\epsilon^{-\alpha})`$, $`0<\alpha<2`$ | $`\epsilon^{-(4-\alpha)}`$ |
+| $`b=\Theta(\epsilon^{-\alpha})`$, $`0\lt \alpha\lt 2`$ | $`\epsilon^{-(4-\alpha)}`$ |
 | $`b=\Omega(\epsilon^{-2})`$ | $`\epsilon^{-2}`$ |
 
 Each row refers to a family of dimensions satisfying the theorem's sufficient condition. At a fixed small dimension, the table need not apply.
@@ -43,7 +43,7 @@ The converse bounds the advantage of a shared fixed orientation by a term of ord
 There is a concrete low-dimensional contrast. For two pure qubits, separate single-copy Pauli measurements already permit root-fidelity estimation with $`O(\epsilon^{-2})`$ copies:
 
 1. Estimate the three Bloch coordinates of each state to Euclidean error at most $`\delta`$, using repeated $`X,Y,Z`$ measurements. Six groups of independent bounded outcomes suffice with $`O(\delta^{-2})`$ total copies and joint success probability at least $`2/3`$, by Hoeffding's inequality and a union bound.
-2. Normalize each nonzero estimated Bloch vector to length one; for a zero estimate, choose any fixed unit vector. On the successful event, the initial vector estimate differs from the true unit vector by at most $`\delta<1`$, so it is nonzero and normalization increases that difference to at most $`2\delta`$.
+2. Normalize each nonzero estimated Bloch vector to length one; for a zero estimate, choose any fixed unit vector. On the successful event, the initial vector estimate differs from the true unit vector by at most $`\delta\lt 1`$, so it is nonzero and normalization increases that difference to at most $`2\delta`$.
 3. The corresponding pure-qubit estimate is within trace distance $`\delta`$ of the true state. For pure vectors, optimal phase alignment gives Euclidean vector error at most $`\sqrt2`$ times that trace distance.
 4. The reverse triangle inequality for the inner product then bounds the root-fidelity error by $`2\sqrt2\,\delta`$. Choose $`\delta=\epsilon/(4\sqrt2)`$, making this error at most $`\epsilon/2`$, and round the resulting fidelity to a finite binary value within $`\epsilon/2`$. This proves the claim with the same $`O(\epsilon^{-2})`$ copy count.
 
