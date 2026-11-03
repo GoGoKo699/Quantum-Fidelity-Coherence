@@ -141,3 +141,9 @@ The theorem treats pure, identical copies and ideal quantum operations with cont
 ## Attribution
 
 Fanizza et al. already established the collective overlap measurement, its efficient implementation, the qualitative small-overlap advantage, and explicit grouping with classical processing. Wang–Zhang established the unrestricted root-fidelity sample endpoint. The result here concerns the matching resource-constrained law and the converse against every allowed adaptive protocol. See the [related-work account](../references/related_work.md) for the exact shared foundations and differences.
+
+## A distinct loop-phase consequence
+
+The common-unitary transcript theorem also applies to arbitrary fixed normalized pure stocks. [Quantum Holonomy Sampling](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling) combines that method with a new phase-specific stock-information bound. For a sparse four-state cycle with adjacent amplitude $`c`$, fixed small circular phase error and sufficiently large dimension, $`N=O(c^{-2})`$ copies require coherent consumed-copy runs of order $`c^{-2}`$.
+
+The [self-contained application](loop_phase.md) states the exact reset contract, finite constants and dimension regime and links the authoritative phase proofs. It does not replace $`\epsilon`$ by $`c`$ in Theorem 1: root fidelity and loop phase have different one-block experiments. Both exhibit a fixed-dimension tomography exception to a dimension-free necessity claim.

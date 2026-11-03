@@ -66,3 +66,9 @@ Fanizza et al. already showed that collective overlap measurements outperform in
 The result here specifies the whole high-dimensional copy tradeoff under a complete-reset constraint and proves it against arbitrary adaptive protocols. It also gives a necessary run size for retaining the unrestricted optimal copy order. The mathematical comparison is finite-error and uniform, so its conclusion does not depend on applying a regular Fisher-information approximation at a boundary point.
 
 The [related-work account](../references/related_work.md) also credits the earlier likelihood-comparison strategy, the polynomial inequalities, and the efficient Schur transform. These ingredients support the theorem without turning into claims of new algorithms or new inequalities.
+
+## A shared method for a different statistical target
+
+The [loop-phase application](loop_phase.md) explains the sister relationship with [Quantum Holonomy Sampling](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling). A phase around four weakly overlapping rays first appears in a four-state invariant. Its optimal one-each four-copy information scales as $`c^8`$. That experiment differs from the two-source root-fidelity block.
+
+What transfers is the general fixed-source transcript method and the complete-reset resource definition. A phase-specific uniform block bound then proves that the optimal total-copy order $`c^{-2}`$ requires runs of that order in a sufficiently large dimension. Classical adaptation is included by the transcript comparison. The same fixed-dimension tomography escape remains available, and no persistent-width or physical-time theorem follows from either run-length result.

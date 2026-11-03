@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "science/loop_phase.md",
+      "index": 20,
+      "source_sha256": "c7ccfa538af4a9e92b10c09b231b9a6297df4dd7c14a8863ee80d1040b63b807",
+      "required_text": [
+        "8",
+        "3",
+        "t",
+        "c",
+        "e"
+      ]
+    },
+    {
+      "path": "science/loop_phase.md",
+      "index": 50,
+      "source_sha256": "e5ca77c1ee61ac1b1fca75d42023ea10b8c1a43104baf523100bca4bf2f3d48a",
+      "required_text": [
+        "128",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "path": "learning/bridge.md",
+      "index": 36,
+      "source_sha256": "ad2180d90058bb94c023c018adc5d4acecbee37a356f56b6299a1cd07c088449",
+      "required_text": [
+        "8",
+        "3",
+        "t",
+        "c",
+        "e"
+      ]
+    }
+  ]
+}

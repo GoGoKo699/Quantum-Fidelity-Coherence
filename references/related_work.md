@@ -2,7 +2,7 @@
 
 The contribution considered here is a uniform copy-complexity law for root fidelity between two fixed unknown pure states, subject to a cap on copies consumed between complete quantum resets. Classical adaptation is unrestricted. The [model](../science/model.md) gives the exact quantifiers and dimension conditions.
 
-The comparisons below distinguish the established ingredients from the resource-constrained conclusion. They reflect a focused primary-source review through October 31, 2026; they are not a claim of exhaustive priority clearance.
+The comparisons below distinguish the established ingredients from the resource-constrained conclusion and its transfer to a four-state phase. They reflect a focused primary-source review through November 3, 2026; they are not a claim of exhaustive priority clearance.
 
 ## 1. Collective overlap measurements and grouping
 
@@ -26,7 +26,7 @@ This work studies a hierarchy of replica-restricted measurements for nonlinear s
 
 That likelihood strategy is credited here. The fixed-overlap pair used in this repository is generated from correlated columns of one common Haar unitary. It is not a literal instance of the paper's stated mixtures and tensors of independent Haar pure states. The [Haar comparison](../science/haar_comparison.md) supplies the required matrix-polynomial comparison explicitly, including its sector constants, adaptive normalization, and measurement refinement.
 
-This is a model-level distinction and a proved transfer argument. It is not a claim that resetting random orientations or using likelihood domination was previously unknown.
+The comparison applies more generally to any fixed pure stock acted on by one common unitary. That extension retains the holomorphic homogeneous amplitudes, classical-only boundaries, and full refined-leaf likelihood comparison. It permits the four-source application in [loop phase](../science/loop_phase.md), once its phase-specific information bound has been supplied. This is a model-level distinction and a proved transfer argument. It is not a claim that resetting random orientations or using likelihood domination was previously unknown.
 
 ## 4. Related resources with different operational meaning
 
@@ -50,9 +50,33 @@ Eqs. (2.8) and (2.4) give Gaussian Schur character orthogonality and the hook-co
 
 Homogeneous Gaussian/apolar norm supermultiplicativity is an inherited inequality. The latter paper states the normalization and product inequality in Eqs. (1)–(2). A symmetric-tensor proof is included here to expose the role of homogeneity and arbitrary complex coefficients.
 
-## 6. Surviving conclusion and comparison limits
+## 6. Bargmann invariants, cycle tests and normalized functions
+
+**Michał Oszmaniec, Daniel J. Brod and Ernesto F. Galvão**, *Measuring relational information between quantum states, and applications*, [arXiv:2109.10006v1](https://arxiv.org/pdf/2109.10006v1) (2021).
+
+This work supplies the Bargmann-invariant framework, direct cycle tests for their real and imaginary parts, and a spanning-tree phase gauge for the Gram matrix. These are the primary operational precedents for the sister phase task. Invariant completeness does not determine the optimal information in a block, and the visibility of a specified cycle test does not bound every block measurement. The sparse four-copy calculation optimizes that information and finds the same leading $`c^8`$ rate already attained by a cycle measurement. The new run-length conclusion additionally requires a uniform growing-stock phase bound and a fixed-source adaptive transcript comparison.
+
+**Yihui Quek, Eneet Kaur and Mark M. Wilde**, *Multivariate trace estimation in constant quantum depth*, Quantum 8, 1220 (2024), [arXiv:2206.15405v3](https://arxiv.org/pdf/2206.15405v3), [DOI](https://doi.org/10.22331/q-2024-01-10-1220).
+
+Their parallel circuits show that a multivariate trace can be estimated at constant quantum circuit depth. Circuit depth and copies consumed before a complete reset are different resources. Additive trace precision is also a different requirement from the phase of a trace whose magnitude tends to zero. Their construction therefore neither supplies nor contradicts the present phase/reset converse.
+
+**Hongshun Yao, Yingjian Liu, Tengxiang Lin and Xin Wang**, *Sample-Efficient Estimation of Nonlinear Quantum State Functions*, [arXiv:2412.01696v3](https://arxiv.org/html/2412.01696v3), version dated June 20, 2025.
+
+The QSF framework estimates a normalized degree-$`n`$ polynomial using $`O(n/\delta^2)`$ copies for additive precision $`\delta`$ (Theorem 1). Its convention fixes the coefficient one-norm to one; rescaling an unnormalized target and controlling its approximation can introduce a normalization factor. Sections IV.1–IV.2 discuss the resulting coefficient and spectral conditioning. This is a relevant copy-access upper-bound framework, rather than a complete-reset lower bound. Its normalized additive guarantee cannot be read directly as uniform root-fidelity or weak-loop-phase precision without retaining those conditioning costs. In particular, phase accuracy for $`|B|=c^4`$ is not additive constant accuracy in $`B`$.
+
+## 7. The proved sister relation and result ownership
+
+[Quantum Holonomy Sampling](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling) supplies the discrete loop-phase task, the sparse four-state hard geometry, and a coherent copy-only construction using $`O(c^{-2})`$ copies at fixed loop length and phase accuracy. Its [phase block-information theorem](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/block-information.md) proves a uniform bound for arbitrary fixed source counts. Its [coherent-run converse](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling/blob/f4b6afc4eac16e82e0e65598664891307f3e091a/science/coherent-runs.md) combines that bound with this repository's general pure-stock comparison.
+
+The resulting endpoint theorem is phase-specific: at fixed small circular accuracy, a uniform estimator with total copies $`N\le Cc^{-2}`$ must have $`b\ge c^{-2}/(128C^{1/3})`$ when $`d\ge9216C^2c^{-4}`$, for $`C\ge1`$. The coherent construction attains order $`c^{-2}`$ total copies and run length. A matching full phase tradeoff at every intermediate run cap and dimension is not asserted. At fixed finite dimension, separate-copy tomography attains $`O_d(c^{-2})`$ at fixed phase accuracy, so the dimension qualification is material.
+
+Quantum Fidelity Coherence owns the root-fidelity tradeoff and the common-unitary adaptive transcript method. Quantum Holonomy Sampling owns the phase-specific information calculation, constructive phase algorithm and phase converse. The [local transfer account](../science/loop_phase.md) gives the source model, reset convention, imported bound, comparison and endpoint in one independently readable route. The relationship is a proved method transfer with a new task-specific input, not a substitution of overlap amplitude for root-fidelity accuracy.
+
+## 8. Surviving conclusion and comparison limits
 
 After these ingredients are credited, the conclusion is the sharp high-dimensional uniform root-fidelity law, the arbitrary-adaptation fixed-source converse, and the resulting necessary coherent-run size for optimal sample order. The finite-dimension restriction, pure-state source contract, and conditional complete-reset condition are material to that statement.
+
+The sister application establishes that the same fixed-source comparison supports a phase theorem after the separate orbit-Gram bound has been proved. It preserves the independent ownership and precision conventions of the two tasks.
 
 The comparison does not establish an optimal gate exponent, a persistent-memory-width theorem, a noisy-device result, or a matching law at every dimension. Those claims are not needed for the theorem and are not inferred from neighboring papers.
 

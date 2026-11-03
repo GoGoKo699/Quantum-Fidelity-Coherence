@@ -1,6 +1,6 @@
 # The 30-milestone understanding map
 
-This map follows one question: **how many copies of two unknown pure states must be processed before a complete quantum reset to retain optimal root-fidelity sample complexity?** The targets describe the project itself. They do not depend on a reader's previous study or assessment history, and they do not claim to cover every specialist calculation.
+This map follows one question: **how many copies of two unknown pure states must be processed before a complete quantum reset to retain optimal root-fidelity sample complexity?** It also follows the proved transfer of the fixed-source method to the sister four-state loop-phase task, making explicit why that task needs a different block-information theorem. The targets describe the project itself. They do not depend on a reader's previous study or assessment history, and they do not claim to cover every specialist calculation.
 
 The single educational anchor is John Watrous, *The Theory of Quantum Information* (Cambridge University Press, 2018; [publisher DOI](https://doi.org/10.1017/9781316848142)). The [author's book page](https://jhwatrous.github.io/books-and-courses.html) links authorized manuscript chapters for personal use. The references below point into that book; the project's proofs and cited research papers supply the additional machinery. The [source bridge](bridge.md) explains this division and translates notation. The [scientific account](../science/README.md) remains authoritative for theorem statements and proofs.
 
@@ -8,7 +8,7 @@ The single educational anchor is John Watrous, *The Theory of Quantum Informatio
 
 The **13 background/preliminaries milestones, M01–M13**, build from one state and one measurement to the complete statistical experiment. This phase needs separate attention to the source contract, uniform root error, and conditional reset rule: changing any of these changes the question. Its last milestone joins these ingredients into one operational model.
 
-The **17 narrative/innovation milestones, M14–M30**, connect the estimator and the converse. The estimator is relatively short; the converse must connect exact block information, adaptive source requests, and the reuse of one unknown orientation. The extra narrative space reflects those distinct logical steps. Its last milestone assembles the contribution, its inherited ingredients, its limitations, and the evidence supporting it.
+The **17 narrative/innovation milestones, M14–M30**, connect the estimator and the converse. The estimator is relatively short; the converse must connect exact block information, adaptive source requests, and the reuse of one unknown orientation. The multistate transfer tests that separation: the common-orientation comparison survives, while the block theorem changes. The extra narrative space reflects those distinct logical steps. Its last milestone assembles the root-fidelity contribution, the transferred method, their inherited ingredients, their limitations, and the evidence supporting them.
 
 Dependencies refer only to earlier milestones. A dependency identifies a useful conceptual input, not a demand to reread every source. Each milestone points to its canonical project location, with relevant Watrous foundations where the book directly helps.
 
@@ -130,10 +130,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** background/preliminaries.
 - **Central question:** What does Haar averaging hide, and what does it preserve?
-- **Understanding target:** Explain the invariance of a Haar-distributed unitary and why applying the same unitary to both states preserves their overlap. Distinguish a mathematical prior or twirl from physical randomization performed by the estimator.
+- **Understanding target:** Explain the invariance of a Haar-distributed unitary and why applying the same unitary to all source states preserves their Gram matrix. Identify root fidelity and a four-state loop phase as different invariants of that matrix. Distinguish a mathematical prior or twirl from physical randomization performed by the estimator.
 - **Dependencies and story role:** M05, M08, M10. Build the hard-instance language while keeping the fixed-input task visible.
-- **Conceptual connection:** A common orientation hides the basis while preserving the parameter. Two independently rotated states would describe a different experiment.
-- **Source pointers:** [Watrous §7.2.1][W7]; [block information Eq. (1)](../science/block_information.md); [adaptive converse §1](../science/adaptive_converse.md#1-two-hard-ensembles).
+- **Conceptual connection:** A common orientation hides the basis while preserving relational information among the rays. Independently rotating different source labels would change their relative geometry and the estimation task.
+- **Source pointers:** [Watrous §7.2.1][W7]; [block information Eq. (1)](../science/block_information.md); [adaptive converse §1](../science/adaptive_converse.md#1-two-hard-ensembles); [loop-phase transfer](../science/loop_phase.md).
 
 ### M12
 
@@ -141,10 +141,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** background/preliminaries.
 - **Central question:** How can a large tensor space be organized into informative symmetry sectors?
-- **Understanding target:** Distinguish a sector label, its unitary-representation space, and its permutation-representation space. Explain weak Schur sampling as measuring only the label, and keep the two kinds of representation dimensions separate.
+- **Understanding target:** Distinguish a sector label, its unitary-representation space, its permutation-representation space, and repeated occurrences of an irreducible representation. Explain weak Schur sampling as measuring only the label, and keep representation dimensions and multiplicities separate.
 - **Dependencies and story role:** M02, M03, M10–M11. Move from individual symmetry operations to the shared structural language of the two proof routes.
-- **Conceptual connection:** The block's two pure-source groups restrict which sectors can occur. The representation-theoretic specialization is supplied by the project, extending the permutation and invariant-measure foundations.
-- **Source pointers:** [Watrous §7.1][W7] for the foundation; [estimator §1, Schur labels](../science/estimator.md#schur-labels-and-the-measured-eigenvalue); [block information §§1–3](../science/block_information.md#3-why-the-schur-label-contains-all-the-block-information).
+- **Conceptual connection:** Two pure-source groups give a multiplicity-free permutation module in this problem. More source labels can leave matrix information inside repeated sectors; a scalar label is not automatically sufficient. The project supplies these representation-theoretic specializations beyond the anchor's foundations.
+- **Source pointers:** [Watrous §7.1][W7] for the foundation; [estimator §1, Schur labels](../science/estimator.md#schur-labels-and-the-measured-eigenvalue); [block information §§1–3](../science/block_information.md#3-why-the-schur-label-contains-all-the-block-information); [loop-phase transfer](../science/loop_phase.md).
 
 ### M13
 
@@ -152,9 +152,9 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** background/preliminaries.
 - **Central question:** Which ingredients must remain fixed when comparing the upper and lower bounds?
-- **Understanding target:** Give one connected account of unknown pure copies, classical source requests, uniform root error, a worst-case copy cap, and complete resets. Explain why constructing one estimator and bounding every permitted estimator are different obligations.
+- **Understanding target:** Give one connected account of unknown pure copies, classical source requests, uniform root error, a worst-case copy cap, and complete resets. Distinguish the target-specific information calculation from the common statistical architecture. Explain why constructing one estimator and bounding every permitted estimator are different obligations.
 - **Dependencies and story role:** M01–M12. Synthesize the background phase into the operational problem and the roles of its proof tools.
-- **Conceptual connection:** Measurement theory, statistical testing, and symmetry now meet in one model. They do not yet establish the tradeoff; the narrative phase must connect them without changing the source or reset rules.
+- **Conceptual connection:** Measurement theory, statistical testing, and symmetry now meet in one model. They do not yet establish the tradeoff; the narrative phase must connect them without changing the source or reset rules. Reusing that architecture for a phase does not identify phase accuracy with root-fidelity accuracy.
 - **Source pointers:** [model §§1–5](../science/model.md); [scientific reading route](../science/README.md); [source bridge](bridge.md).
 
 ## Phase II: narrative/innovation
@@ -205,14 +205,14 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 ### M18
 
-**A block represented by a subset Gram matrix**
+**A block represented by a source-word Gram matrix**
 
 - **Phase:** narrative/innovation.
 - **Central question:** How can the overlap dependence of a fixed-stock block be isolated algebraically?
-- **Understanding target:** Explain subsets as source-label placements, their physical tensor vectors, and why the Gram entry depends only on the number of labels exchanged. Relate the subset-module decomposition to the two-row sector labels and their multiplicities.
+- **Understanding target:** Explain subsets as the two-source case of words with fixed source counts. Build their physical tensor vectors and Gram entries. Relate the two-source subset decomposition to its two-row sector labels, then identify what must be retained when four labels give matrix-valued multiplicity blocks.
 - **Dependencies and story role:** M02, M05, M10–M12. Begin the converse route with an exact representation of one block.
-- **Conceptual connection:** A quantum overlap problem becomes a structured matrix problem. The resulting eigenvalues encode the same sector probabilities used by the collective measurement.
-- **Source pointers:** [block information §§1–2](../science/block_information.md#1-the-permutation-module-on-subsets), especially Eqs. (7)–(14); [Watrous §7.1][W7] for the permutation foundation.
+- **Conceptual connection:** A quantum relational problem becomes a structured matrix problem. The two-source Gram eigenvalues encode scalar sector probabilities. A general source-word Gram retains the additional phase information needed by a multistate task.
+- **Source pointers:** [block information §§1–2](../science/block_information.md#1-the-permutation-module-on-subsets), especially Eqs. (7)–(14); [loop-phase transfer](../science/loop_phase.md); [bridge Section 7](bridge.md#7-the-sister-transfer-a-phase-needs-its-own-block-theorem); [Watrous §7.1][W7] for the permutation foundation.
 
 ### M19
 
@@ -220,21 +220,21 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** Why does analyzing Schur labels suffice for a converse about arbitrary measurements?
-- **Understanding target:** Explain the twirled state's orthogonal sectors and their parameter-independent normalized states. Show conceptually how any block outcome is a parameter-independent stochastic processing of the sector label, including operations using known ancillas.
+- **Understanding target:** Explain the two-source twirled state's orthogonal sectors and their parameter-independent normalized states. Show conceptually how any outcome is a parameter-independent stochastic processing of the sector label, including known ancillas. State why the four-source case instead requires the full multiplicity matrices.
 - **Dependencies and story role:** M03, M09, M11–M12, M18. Turn a convenient measurement into an information bound for every measurement on the averaged stock.
-- **Conceptual connection:** Sufficiency follows from the state's structure, not from assuming that an adversarial estimator uses an invariant measurement. It concerns a common-orientation twirl of a specified stock.
-- **Source pointers:** [block information §3](../science/block_information.md#3-why-the-schur-label-contains-all-the-block-information), Eqs. (17)–(19); [Watrous §2.3][W2] and [§7.2.1][W7].
+- **Conceptual connection:** Sufficiency follows from the state's structure, not from assuming that an adversarial estimator uses an invariant measurement. It concerns a common-orientation twirl of a specified stock; scalar-label sufficiency is a special property of the two-source model.
+- **Source pointers:** [block information §3](../science/block_information.md#3-why-the-schur-label-contains-all-the-block-information), Eqs. (17)–(19); [loop-phase transfer](../science/loop_phase.md); [Watrous §2.3][W2] and [§7.2.1][W7].
 
 ### M20
 
 **Exact block information and a global bound**
 
 - **Phase:** narrative/innovation.
-- **Central question:** How does the Gram structure control the distinguishability of small nonzero fidelity from zero?
-- **Understanding target:** Explain the exact chi-square kernel as a trace of two Gram matrices and the counting interpretation of its coefficients. Follow the route from that identity to relative entropy at most $`rsf^2=rsF^4`$ for a stock with $`r`$ and $`s`$ copies.
+- **Central question:** How does the Gram structure control the distinction required by each estimation target?
+- **Understanding target:** Explain the two-source exact chi-square kernel and its counting coefficients, then follow its bound $`D\le rsf^2=rsF^4`$. For the sparse phase stock, identify the four-label winding needed for a phase-dependent entry and the uniform spectral floor needed when the stock grows. Distinguish the optimal four-copy information from the visibility of a chosen cycle test.
 - **Dependencies and story role:** M05, M09, M18–M19. Obtain the quantitative information budget for one fresh block.
-- **Conceptual connection:** The bound is global in the parameter; it is not a local Fisher-information approximation or a small-block expansion. Data processing transfers it to every block measurement.
-- **Source pointers:** [block information §§4–5](../science/block_information.md#4-exact-chi-square-kernel), Theorem 1 and Corollary 2; [Watrous Chapter 5][W5] for relative-entropy background.
+- **Conceptual connection:** The root-fidelity kernel is global in its parameter. The separate phase bound is uniform over growing stocks, giving $`D=O(t^4c^8)`$ when $`tc^2`$ is bounded. A local Fisher-information calculation or fixed-stock expansion alone cannot supply that uniform control. Data processing then bounds every stock measurement.
+- **Source pointers:** [block information §§4–5](../science/block_information.md#4-exact-chi-square-kernel), Theorem 1 and Corollary 2; [loop-phase transfer](../science/loop_phase.md); [Watrous Chapter 5][W5] for relative-entropy background.
 
 ### M21
 
@@ -253,10 +253,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** How can every adaptive run be represented on one fixed input space?
-- **Understanding target:** Explain concatenating complete runs into superblocks, presupplying enough copies of both sources, and discarding unused stock. Account for variable run lengths, intermediate measurements, early stopping, and dummy padding without replacing a worst-case budget by an expectation.
+- **Understanding target:** Explain concatenating complete runs into superblocks, presupplying enough copies of every source label, and discarding unused stock. Account for variable run lengths, intermediate measurements, early stopping, and dummy padding without replacing a worst-case budget by an expectation. Distinguish the two-label and four-label padding counts.
 - **Dependencies and story role:** M03–M04, M06–M07, M21. Resolve the allocation and stopping issue before invoking a block-information theorem.
-- **Conceptual connection:** Padding gives the analysis extra inputs while exactly simulating the original classical transcript. Boundaries remain genuine complete resets, so each conditional superblock is one effective POVM.
-- **Source pointers:** [adaptive converse §2](../science/adaptive_converse.md#2-a-fixed-stock-simulation-of-arbitrary-source-choices), Eqs. (4)–(5); [Haar comparison §4.1](../science/haar_comparison.md#41-compression-of-a-superblock).
+- **Conceptual connection:** Padding gives the analysis extra inputs while exactly simulating the original classical transcript. Boundaries remain genuine complete resets, so each conditional superblock is one effective POVM. More source labels change the padded degree and constants, rather than invalidating this reduction.
+- **Source pointers:** [adaptive converse §2](../science/adaptive_converse.md#2-a-fixed-stock-simulation-of-arbitrary-source-choices), Eqs. (4)–(5); [Haar comparison §4.1](../science/haar_comparison.md#41-compression-of-a-superblock); [loop-phase transfer](../science/loop_phase.md).
 
 ### M23
 
@@ -264,9 +264,9 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** Why can an adaptive transcript still have a useful algebraic representation?
-- **Understanding target:** Explain rank-one refinement of measurement effects and a fixed leaf's homogeneous amplitude in the entries of the common unitary. Distinguish joint unnormalized probabilities from conditional posterior ratios, and identify why continuous outcomes require a measurable refinement.
+- **Understanding target:** Explain rank-one refinement of measurement effects and a fixed leaf's homogeneous amplitude in the entries of the common unitary. Identify the fixed pure stock, rather than a particular two-state parameter, as the source of homogeneity. Distinguish joint unnormalized probabilities from conditional posterior ratios, and identify why continuous outcomes require a measurable refinement.
 - **Dependencies and story role:** M03, M07, M11, M22. Express the fixed-orientation difficulty in a form to which polynomial inequalities apply.
-- **Conceptual connection:** Once a history is specified, its measurement coefficients are fixed. Adaptation does not remove homogeneity, whereas normalizing each branch by its earlier probability would destroy the polynomial form used here.
+- **Conceptual connection:** Once a history is specified, its measurement coefficients are fixed. Adaptation and extra source labels do not remove homogeneity, whereas normalizing each branch by its earlier probability would destroy the polynomial form used here. This identifies the methodological bridge to the sister task.
 - **Source pointers:** [Haar comparison §4](../science/haar_comparison.md#4-from-measurements-to-homogeneous-likelihoods); [Watrous §2.3][W2] for measurement effects. The continuous-outcome refinement and transcript argument are supplied in the project.
 
 ### M24
@@ -297,10 +297,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** How do the one-block information bound and the orientation comparison produce a testing bound for the real protocol?
-- **Understanding target:** Explain how density domination gives a total-variation bound, how the refreshed experiment accumulates conditional divergence, and why the triangle inequality uses the orientation comparison for both hypotheses. Identify the coherent-stock term and the finite-dimension correction in the final bound.
+- **Understanding target:** Explain how density domination gives a total-variation bound, how the refreshed experiment accumulates conditional divergence, and why the triangle inequality uses the orientation comparison for both hypotheses. Identify the task-specific stock-information term and the common finite-dimension correction in both the fidelity and phase bounds.
 - **Dependencies and story role:** M08–M09, M20, M22, M25. Integrate the converse's local ingredients into a statement about the physical fixed-source transcript.
-- **Conceptual connection:** The finite-dimension correction explicitly pays for learning the common orientation. Removing it would claim a stronger theorem than this comparison proves.
-- **Source pointers:** [Haar comparison §§1 and 5](../science/haar_comparison.md#1-statement-and-operational-setting); [adaptive converse §3](../science/adaptive_converse.md#3-introduce-then-control-the-refreshed-experiment), especially Eq. (10).
+- **Conceptual connection:** The finite-dimension correction explicitly pays for learning the common orientation. Removing it would claim a stronger theorem than this comparison proves. Transferring the comparison still requires injecting a separately proved bound for the new target.
+- **Source pointers:** [Haar comparison §§1 and 5](../science/haar_comparison.md#1-statement-and-operational-setting); [adaptive converse §3](../science/adaptive_converse.md#3-introduce-then-control-the-refreshed-experiment), especially Eq. (10); [loop-phase transfer](../science/loop_phase.md).
 
 ### M27
 
@@ -319,10 +319,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** How long must a coherent run be if the total-copy count has the unrestricted optimal order?
-- **Understanding target:** Explain why a budget of order $`\epsilon^{-2}`$ forces a run cap at least of order $`\epsilon^{-2}`$ under the corollary's stated dimension condition, and why the estimator attains that order. Distinguish this necessity statement's dimension hypothesis from the sufficient condition used for the entire matching curve.
+- **Understanding target:** Explain why root-fidelity total cost of order $`\epsilon^{-2}`$ forces runs of that order under its stated dimension condition. Separately explain why fixed-accuracy sparse-loop phase cost of order $`c^{-2}`$ forces runs of order $`c^{-2}`$ in the sister theorem's large-dimension regime. Distinguish a matched full curve from the phase result's matched copy-optimal endpoint.
 - **Dependencies and story role:** M07, M17, M26–M27. Extract the operational consequence from the general tradeoff without losing its hypotheses.
-- **Conceptual connection:** The conclusion concerns copies consumed before a complete reset. Its proof constants describe a bound; they are not hardware design requirements or a gate-count optimum.
-- **Source pointers:** [model §4, Corollary 2](../science/model.md#4-the-sample-optimality-threshold); [adaptive converse §5](../science/adaptive_converse.md#5-the-sample-optimality-threshold); [interpretation §1](../science/interpretation.md#1-precision-and-coherent-processing).
+- **Conceptual connection:** Both conclusions concern copies consumed before a complete reset, and both have attaining constructions. They follow from different target-specific block bounds. Their proof constants are not hardware design requirements or a gate-count optimum.
+- **Source pointers:** [model §4, Corollary 2](../science/model.md#4-the-sample-optimality-threshold); [adaptive converse §5](../science/adaptive_converse.md#5-the-sample-optimality-threshold); [loop-phase transfer](../science/loop_phase.md); [bridge Section 7](bridge.md#7-the-sister-transfer-a-phase-needs-its-own-block-theorem).
 
 ### M29
 
@@ -330,10 +330,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** Why does the theorem not imply that short coherent runs always cost a fourth power of precision?
-- **Understanding target:** Explain the pure-qubit single-copy tomography construction and its root-fidelity error control. Distinguish the theorem's task from squared-overlap estimation, mixed-state fidelity, coherent-oracle access, persistent quantum memory, and noisy-source operation.
+- **Understanding target:** Explain the pure-qubit single-copy tomography construction and its root-fidelity error control. Explain why tomography of four rays in fixed finite dimension also permits fixed-accuracy loop-phase cost $`O_d(c^{-2})`$ with run cap one. Distinguish both theorems from mixed-state targets, coherent-oracle access, persistent quantum memory, and noisy-source operation.
 - **Dependencies and story role:** M04–M07, M27–M28. Test the interpretation against a concrete counterexample to an overbroad claim.
-- **Conceptual connection:** In low dimension, estimating state descriptions can avoid the high-dimensional penalty while obeying even stricter reset behavior. The dimension assumption is part of the scientific content, not a presentation caveat.
-- **Source pointers:** [interpretation §§2–4](../science/interpretation.md#3-why-the-dimension-restriction-is-real); [model §5](../science/model.md#5-computational-and-physical-scope); [Watrous §3.2][W3] for fidelity and state-distance foundations.
+- **Conceptual connection:** In low dimension, estimating state descriptions can avoid the high-dimensional penalty while obeying even stricter reset behavior. Neither the fidelity nor the phase result supports a dimension-unqualified necessity claim. The dimension assumption is part of the scientific content.
+- **Source pointers:** [interpretation §§2–4](../science/interpretation.md#3-why-the-dimension-restriction-is-real); [model §5](../science/model.md#5-computational-and-physical-scope); [loop-phase transfer](../science/loop_phase.md); [Watrous §3.2][W3] for fidelity and state-distance foundations.
 
 ### M30
 
@@ -341,10 +341,10 @@ Dependencies refer only to earlier milestones. A dependency identifies a useful 
 
 - **Phase:** narrative/innovation.
 - **Central question:** What has been established, what was inherited, and what remains outside the result?
-- **Understanding target:** Connect the legal algorithm, exact block information, fixed-source adaptive comparison, and matching high-dimensional law in one explanation. Attribute the collective measurement, grouping, unrestricted endpoint, transform implementation, and polynomial ingredients correctly. Distinguish finite numerical checks from the analytical proof and identify the unresolved low-dimensional frontier.
+- **Understanding target:** Connect the legal algorithm, exact block information, fixed-source adaptive comparison, and matching high-dimensional law in one explanation. Explain the sister transfer's shared method and distinct phase theorem. Attribute collective measurements, replica likelihood methods, cycle tests, the unrestricted endpoints, transform implementation, and polynomial ingredients correctly. Distinguish finite checks from analytical proof and identify the unresolved full phase tradeoff and low-dimensional frontiers.
 - **Dependencies and story role:** M13–M29. Synthesize the narrative phase and the full project, preserving both the positive result and its boundaries.
-- **Conceptual connection:** The scientific advance is the resource-constrained law and converse for the specified adaptive fixed-source model. Its strength is assessed from that result and its exact assumptions, rather than from inventing a new measurement or overlooking related comparison methods.
-- **Source pointers:** [model](../science/model.md); [interpretation §5](../science/interpretation.md#5-what-is-added-to-the-earlier-collective-measurement-picture); [related work](../references/related_work.md); [verification guide](../verification/README.md); [source bridge](bridge.md).
+- **Conceptual connection:** This repository owns the root-fidelity law and reusable fixed-source comparison. Quantum Holonomy Sampling owns the loop-phase task, coherent construction, and phase-specific block/converse account. Their relationship is a proved transfer with distinct consequences, rather than numerical substitution in an existing tradeoff or a claim to have invented cycle testing.
+- **Source pointers:** [model](../science/model.md); [interpretation §5](../science/interpretation.md#5-what-is-added-to-the-earlier-collective-measurement-picture); [loop-phase transfer](../science/loop_phase.md); [related work](../references/related_work.md); [verification guide](../verification/README.md); [source bridge](bridge.md).
 
 ## Reading after the map
 

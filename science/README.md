@@ -13,6 +13,7 @@ The answer is a matching high-dimensional law for fixed pure inputs, including a
 | [Exact block information](block_information.md) | Subset representations, Johnson eigenvalues, Schur sufficiency, exact chi-square kernel, and global relative entropy |
 | [Haar comparison](haar_comparison.md) | Full polynomial-sector normalization, Bombieri inequality, measurable transcript refinement, and fixed-versus-refreshed comparison |
 | [Adaptive converse](adaptive_converse.md) | Padded superblocks, arbitrary internal source choices and stopping, explicit lower-bound constants, and sample-optimality threshold |
+| [Loop-phase application](loop_phase.md) | General pure-stock transcript method, the distinct four-state phase task, and the high-dimensional copy-optimal run threshold |
 | [Interpretation](interpretation.md) | Precision dependence, the low-dimensional contrast, and the operational meaning of a complete reset |
 
 For a short route, read the model, estimator Sections 1–3, adaptive converse Sections 1–5, and interpretation. The two representation-theoretic pages supply the complete supporting arguments.
@@ -22,3 +23,7 @@ For a short route, read the model, estimator Sections 1–3, adaptive converse S
 The upper bound uses the exact moments of a single collective observable and an inherited efficient Schur transform. The lower bound uses an exact block-divergence calculation, an algebraic stationary-to-refreshed transcript comparison, and a fixed-stock simulation. The latter avoids treating adaptively selected source counts as if they had been fixed before a measurement.
 
 The [related-work account](../references/related_work.md) identifies the imported ingredients. The [verification guide](../verification/README.md) provides finite checks of the operator moments, Gram spectra, and polynomial norms. Those checks complement the analytical arguments; they do not replace them.
+
+## Relationship to Quantum Holonomy Sampling
+
+The [sister project](https://github.com/GoGoKo699/Quantum-Holonomy-Sampling) owns the phase-specific orbit-Gram and coherent-run proofs. This repository owns the general stationary-to-refreshed comparison used at that boundary. The [application](loop_phase.md) is self-contained about the source contract and consequence, while the versioned proof links avoid duplicating a second derivation of the phase theorem. Both tasks count consumed copies between complete resets; their statistical targets and block-divergence bounds differ.
